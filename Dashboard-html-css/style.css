@@ -1,4 +1,4 @@
-*{
+/* *{
     margin:0;
     padding:0;
     font-family:sans-serif;
@@ -75,4 +75,152 @@
     margin:20px;
     font-weight: 100;
     line-height: 25px;
+} */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Banner background */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75)), url(assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 7.5%;
+    padding: 1px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 75%;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 600;
+    padding-left: 15px;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #d81b0d;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 1.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Content */
+.content {
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/* ----------------- MOBILE LANDSCAPE ENFORCEMENT ----------------- */
+
+/* For portrait mobiles: rotate page to landscape */
+@media only screen and (orientation: portrait) and (max-width: 768px) {
+    body {
+        transform: rotate(90deg);
+        transform-origin: left top;
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* Optional overlay message */
+    .banner::before {
+        content: "Please rotate your device to landscape";
+        color: white;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        text-align: center;
+        z-index: 9999;
+    }
+}
+
+/* For landscape mobiles: normal layout */
+@media only screen and (orientation: landscape) and (max-width: 768px) {
+    body {
+        transform: none;
+        width: 100vw;
+        height: 100vh;
+        overflow: auto;
+    }
+    .banner::before {
+        content: none;
+    }
+
+    /* Adjust navbar and content for smaller screens */
+    .navbar {
+        height: 10%;
+        padding: 5px 0;
+    }
+
+    .logo {
+        height: 80%;
+    }
+
+    .navbar ul li a {
+        font-size: 0.9em;
+        padding-left: 10px;
+    }
+
+    .content {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    .content p {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 10px;
+    }
 }
