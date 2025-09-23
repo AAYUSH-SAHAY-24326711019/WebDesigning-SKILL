@@ -6,7 +6,9 @@
 body{
     font-family: "Inter", sans-serif;
     background-image: url("/images/mainBackground.jpg");
-    backdrop-filter: blur(10px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
 
 }
 
@@ -40,3 +42,51 @@ ul li a{
 ul li a:hover{
     color:aqua;
 }
+
+.container{
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.345);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.card{
+    color:#fff;
+    background-color: rgba(236, 233, 233, 0.137);
+    backdrop-filter: blur(2px);
+    border:1px solid white;
+    padding:40px;
+    width: 700px;
+    border-radius: 1rem;
+}
+
+.card h1{
+    font-size: 40px;
+    padding:20px;
+    text-align: center;
+}
+
+.card p{
+    font:18px;
+    line-height: 1.8rem;
+    text-align: center;
+}
+
+@media(max-width:800px){
+    .card{
+        width: 300px;
+    }
+}
+
+@media(max-width:466px){
+    .card{
+        width: 280px;
+        padding:45px;
+    }
+}
+/*  */
