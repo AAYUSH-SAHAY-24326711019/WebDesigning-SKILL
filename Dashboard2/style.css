@@ -98,12 +98,7 @@ ul li a:hover{
     }
 }
 
-@media(max-width:466px){
-    .card{
-        width: 280px;
-        padding:45px;
-    }
-}
+
 footer{
     color:#fff;
     text-align: center;
@@ -120,7 +115,7 @@ footer{
 }
 
 .card2{
-    width: 30%;
+    width: 40%;
     padding:1.5rem;
     margin:2rem;
     border: 1px solid rgba(255, 255, 255, 0.26);
