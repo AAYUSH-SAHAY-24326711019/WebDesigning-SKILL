@@ -4,9 +4,11 @@
 }
 
 body{
+    height: 100vh;
+    width: 100vw;
     font-family: "Inter", sans-serif;
-    background-image: url("mainBackground.jpg");
-    background-repeat: no-repeat;
+    background: url("mainBackground.jpg")  center center;
+    /* background-repeat: no-repeat; */
     background-size: cover;
     backdrop-filter: blur(1px);
     position: relative;
