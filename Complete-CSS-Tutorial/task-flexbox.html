@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box task</title>
+    <style>
+*{
+    margin:0; padding:0;
+}
+nav{
+    margin:8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav a{
+    margin:8px;
+    text-decoration:none;
+    color:#ff7200;
+}
+.image-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+}
+
+.image{
+    width:100px; 
+    height:100px;
+   background: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.304)50%,rgba(8, 85, 201, 0.003));   
+    backdrop-filter: blur(11px); 
+}
+
+.container{
+    margin-top:20px;
+    border:1px solid;
+    height:120px;
+    display:flex;
+    justify-items: center;
+}
+
+.box{
+    height:100px; width:100px;
+    border:1px solid;
+    margin:5px;
+}
+
+#box3{
+    flex-shrink:2;
+}
+
+.mediaQueryDiv{
+    margin-top:20px;
+    height:120px; width:120px;
+    color:white;
+    border:1px solid;
+    background-color: green;
+}
+
+@media screen and (min-width:300px) and (max-width:400px) {
+    .mediaQueryDiv{
+        background-color:red;
+    }
+}
+
+@media screen and (min-width:400px){
+    .mediaQueryDiv{
+        background-color: blue;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- make the nav bar -->
+     <nav>
+        <a href="#">Home</a>        
+        <a href="#">About</a>        
+        <a href="#">Contact us</a>        
+        <a href="#">Services</a>        
+
+     </nav>
+     <!-- center an image inside a div -->
+      <div class="image-container">
+        <div class="image">
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="box1" class="box">Box1</div>
+        <div id="box2" class="box">Box2</div>
+        <div id="box3" class="box">Box3</div>
+      </div>
+
+      <div class="mediaQueryDiv">
+        Box
+      </div>
+    
+</body>
+</html>
